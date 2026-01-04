@@ -1,0 +1,11 @@
+{
+  "name": "pinyin_simple_backend",
+  "version": "1.0.0",
+  "description": "pinyin simple backend",
+  "frameworks": ["arduino", "zephyr"],
+  "platforms": ["nordicnrf52", "espressif32"],
+  "build": {
+    "includeDir": "include",
+    "extraScript": "extra_script.py"
+  }
+}
