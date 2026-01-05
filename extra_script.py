@@ -24,9 +24,8 @@ elif cpu == "esp32c3" or cpu == "esp32c6":
 
 if arch == "":
     print("Unknown architecture")
-    return None
-
-env.Append(
-    LIBPATH=[os.path.realpath("lib/{}/".format(arch))],
-    LIBS=["pinyin_simple_backend"]
-)
+else:
+    env.Append(
+        LIBPATH=[os.path.realpath("lib/{}/".format(arch))],
+        LIBS=["pinyin_simple_backend"]
+    )
