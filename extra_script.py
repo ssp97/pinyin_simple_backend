@@ -26,7 +26,7 @@ if arch == "":
     print("Unknown architecture")
     FALLBACK_SRC = os.path.abspath("lib/unknow/pinyin_simple_backend.c")
     env.Append(
-            SOURCE_FILES=[FALLBACK_SRC]
+            SRC_FILTER=[f"+<{FALLBACK_SRC}>"]
         )
 else:
     env.Append(
