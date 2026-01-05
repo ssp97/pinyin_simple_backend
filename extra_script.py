@@ -24,8 +24,12 @@ elif cpu == "esp32c3" or cpu == "esp32c6":
 
 if arch == "":
     print("Unknown architecture")
-else:
+    FALLBACK_SRC = os.path.abspath("lib/unknow/pinyin_simple_backend.c")
     env.Append(
-        LIBPATH=[os.path.realpath("lib/{}/".format(arch))],
-        LIBS=["pinyin_simple_backend"]
-    )
+            SOURCE_FILES=[FALLBACK_SRC]
+        )
+
+env.Append(
+    LIBPATH=[os.path.realpath("lib/{}/".format(arch))],
+    LIBS=["pinyin_simple_backend"]
+)
