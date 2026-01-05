@@ -28,8 +28,8 @@ if arch == "":
     env.Append(
             SOURCE_FILES=[FALLBACK_SRC]
         )
-
-env.Append(
-    LIBPATH=[os.path.realpath("lib/{}/".format(arch))],
-    LIBS=["pinyin_simple_backend"]
-)
+else:
+    env.Append(
+        LIBPATH=[os.path.realpath("lib/{}/".format(arch))],
+        LIBS=["pinyin_simple_backend"]
+    )
