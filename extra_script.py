@@ -19,8 +19,10 @@ if cpu == "cortex-m4":
     arch = "cortex-m4f"
 elif cpu == "esp32" or cpu == "esp32s2" or cpu == "esp32s3":
     arch = "xtensa-esp32"
-elif cpu == "esp32c3" or cpu == "esp32c6":
-    arch = "riscv32"
+elif cpu == "esp32c3":
+    arch = "riscv32-imc"
+elif cpu == "esp32c6":
+    arch = "riscv32-imac"
 
 if arch == "":
     print("Unknown architecture")
