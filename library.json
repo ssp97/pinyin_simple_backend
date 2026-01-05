@@ -5,7 +5,6 @@
   "frameworks": ["arduino", "zephyr"],
   "platforms": ["nordicnrf52", "espressif32"],
   "build": {
-    "includeDir": "include",
     "extraScript": "extra_script.py"
   }
 }

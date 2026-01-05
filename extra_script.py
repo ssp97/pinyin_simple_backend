@@ -26,6 +26,6 @@ if arch == "":
     raise ValueError("Unknown architecture")
 
 env.Append(
-    LIBPATH=[os.path.realpath("lib/{}".format(arch))],
-    LIBS=["libpinyin_simple_backend"]
+    LIBPATH=[os.path.realpath("lib/{}/".format(arch))],
+    LIBS=["pinyin_simple_backend"]
 )
