@@ -23,7 +23,8 @@ elif cpu == "esp32c3" or cpu == "esp32c6":
     arch = "riscv32"
 
 if arch == "":
-    raise ValueError("Unknown architecture")
+    print("Unknown architecture")
+    return
 
 env.Append(
     LIBPATH=[os.path.realpath("lib/{}/".format(arch))],
